@@ -15,6 +15,9 @@
   "main": "./lib/rp.js",
   "scripts": {
     "test": "./node_modules/.bin/gulp ci",
+    "build": "rm -rf lib/* && flow-remove-types src/ -d lib/ --pretty && flow-copy-source src lib",
+    "lint": "eslint src --ext js,mjs --quiet",
+    "flow": "flow check src",
     "test-publish": "./node_modules/.bin/gulp ci-no-cov"
   },
   "license": "ISC",
@@ -46,6 +49,19 @@
     "publish-please": "~2.1.4",
     "request": "^2.34.0",
     "rimraf": "~2.5.3",
-    "run-sequence": "~1.2.2"
+    "run-sequence": "~1.2.2",
+     "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-async-await": "^0.0.0",
+    "eslint-plugin-flowtype": "^3.7.0",
+    "eslint-plugin-flowtype-errors": "^4.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^21.22.0",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.98.1",
+    "flow-copy-source": "^2.0.6",
+    "flow-remove-types": "^2.99.0",
+    "flow-typed": "^2.5.1"
   }
 }
