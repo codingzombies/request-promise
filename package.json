@@ -1,7 +1,6 @@
 {
   "name": "@zombee/request-promise",
   "version": "0.0.0",
-  "private": true,
   "description": "The simplified HTTP request client 'request' with Promise support. Powered by Bluebird.",
   "keywords": [
     "xhr",
